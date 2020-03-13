@@ -1,0 +1,15 @@
+{
+    "app": {
+      "serverName": "localhost",
+      "portRun": ":8000",
+      "serverURL": "localhost",
+      "logFile": "gin.log"
+    },
+    "postgresParams": {
+      "server": "localhost",
+      "port": 5432,
+      "user": "postgres",
+      "password": "qwerty",
+      "database": "ecobook"
+    }
+  }
