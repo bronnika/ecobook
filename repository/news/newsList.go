@@ -6,7 +6,7 @@ import (
 )
 
 func NewsList(response *[]models.NewsResponse) error {
-	sqlQuery := ``
+	sqlQuery := `select * from news_list()`
 
 	if err := db.GetDBConn().Raw(sqlQuery).Scan(&response).Error; err != nil {
 		return err

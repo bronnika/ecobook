@@ -5,8 +5,10 @@ import (
 	"io"
 	"log"
 	"os"
-	"github.com/gin-gonic/gin"
+
+	"../controller/news"
 	"../utils"
+	"github.com/gin-gonic/gin"
 )
 
 func RunAllRoutes() {
@@ -20,6 +22,8 @@ func RunAllRoutes() {
 
 	log.SetOutput(f)
 	gin.DefaultWriter = io.MultiWriter(f, os.Stdout)
+
+	r.GET("/news_list", news.NewsList)
 
 	_ = r.Run(utils.AppSettings.AppParams.PortRun)
 }
