@@ -11,3 +11,13 @@ type MyProductList struct {
 	IsActive   bool      `gorm:"p_is_active" json:"is_active"`
 	CreateDate time.Time `gorm:"column:p_create_date" json:"create_date"`
 }
+
+type FavoriteProduct struct {
+	ID           int     `json:"id" gorm:"column:p_id"`
+	Name         string  `json:"name" gorm:"column:p_name"`
+	Photo        string  `json:"photo" gorm:"column:p_photo"`
+	Description  string  `json:"description" gorm:"column:p_description"`
+	BuyerID      int     `json:"buyer_id" gorm:"column:buyer_id"`
+	SaleTypeName string  `json:"sale_type_name" gorm:"column:p_sale_type_name"`
+	Price        float64 `json:"price" gorm:"column:p_price"`
+}

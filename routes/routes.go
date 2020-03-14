@@ -44,12 +44,15 @@ func RunAllRoutes() {
 	r.GET("/products/:categoryID", product.GetProductList)
 	r.GET("/my_product_list", my_product_list.MyProductList)
 
+	r.POST("/like_product/:product_id", my_product_list.LikeProduct)
+	r.GET("/favorite_products", my_product_list.FavoriteProducts)
+
 	utilize := r.Group("/utilize")
 	utilize.GET("/categories", utilize_point.GetCategories)
 	utilize.GET("/categories/:category_id", utilize_point.GetPoints)
 	utilize.GET("/point/:id", utilize_point.GetPoint)
 
-	go controller.HandleMessages()
+	//go controller.HandleMessages()
 
 	_ = r.Run(utils.AppSettings.AppParams.PortRun)
 }
