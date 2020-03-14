@@ -38,5 +38,7 @@ func RunAllRoutes() {
 	r.GET("/image/:image_name", controller.GetImages)
 	r.GET("/product_categories", second.GetCategories)
 
+	go controller.HandleMessages()
+
 	_ = r.Run(utils.AppSettings.AppParams.PortRun)
 }

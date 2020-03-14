@@ -30,6 +30,6 @@ func Registration(c *gin.Context) {
 	}
 
 	c.JSON(http.StatusOK, gin.H{
-		"reason": "success",
+		"user_id": userId,
 	})
 }
