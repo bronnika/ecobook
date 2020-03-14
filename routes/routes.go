@@ -14,6 +14,7 @@ import (
 	"ecobook/utils"
 
 	"ecobook/controller/product"
+
 	"github.com/gin-gonic/gin"
 )
 
@@ -39,8 +40,6 @@ func RunAllRoutes() {
 	utilize.GET("/categories", utilize_point.GetCategories)
 	utilize.GET("/categories/:category_id", utilize_point.GetPoints)
 	utilize.GET("/point/:id", utilize_point.GetPoint)
-
-	r.GET("/my_product_list", my_product_list.MyProductList)
 
 	_ = r.Run(utils.AppSettings.AppParams.PortRun)
 }
