@@ -3,6 +3,7 @@ package models
 type Settings struct {
 	AppParams      Params           `json:"app"`
 	PostgresParams PostgresSettings `json:"postgresParams"`
+	Token          string           `json:"token"`
 }
 
 type Params struct {

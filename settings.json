@@ -11,5 +11,6 @@
       "user": "postgres",
       "password": "qwerty",
       "database": "ecobook"
-    }
+    },
+    "token": "21319216ff1b231d85a2d894aa36e5df61f89fd5f28a829157616dc365544633"
   }

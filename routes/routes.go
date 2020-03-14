@@ -1,6 +1,7 @@
 package routes
 
 import (
+	"ecobook/controller/auth"
 	"ecobook/controller/my_product_list"
 	"fmt"
 	"io"
@@ -30,6 +31,13 @@ func RunAllRoutes() {
 	log.SetOutput(f)
 	gin.DefaultWriter = io.MultiWriter(f, os.Stdout)
 
+	r.POST("/otp", auth.OtpServer)
+	r.POST("/otp_check", auth.OtpCheck)
+
+	r.POST("/registration", auth.Registration)
+
+	r.GET("ws")
+
 	r.GET("/news_list", news.NewsList)
 	r.GET("/image/:image_name", controller.GetImages)
 	r.GET("/product_categories", second.GetCategories)
@@ -40,6 +48,8 @@ func RunAllRoutes() {
 	utilize.GET("/categories", utilize_point.GetCategories)
 	utilize.GET("/categories/:category_id", utilize_point.GetPoints)
 	utilize.GET("/point/:id", utilize_point.GetPoint)
+
+	go controller.HandleMessages()
 
 	_ = r.Run(utils.AppSettings.AppParams.PortRun)
 }
