@@ -1,6 +1,18 @@
 [GIN-debug] GET    /news_list                --> ecobook/controller/news.NewsList (3 handlers)
 [GIN-debug] GET    /image/:image_name        --> ecobook/controller.GetImages (3 handlers)
 [GIN-debug] GET    /product_categories       --> ecobook/controller/second.GetCategories (3 handlers)
+[GIN-debug] GET    /my_product_list          --> ecobook/controller/my_product_list.MyProductList (3 handlers)
 [GIN-debug] Listening and serving HTTP on :8000
-2020/03/14 10:29:10 interrupt
-2020/03/14 10:29:10 Exit command received. Exiting ....
+2020/03/14 11:45:37 200 NewsList
+2020/03/14 11:47:18 200 NewsList
+2020/03/14 11:57:29 200 NewsList
+2020/03/14 11:58:31 NewsList error pq: structure of query does not match function result type
+2020/03/14 11:59:57 NewsList error pq: structure of query does not match function result type
+2020/03/14 12:07:02 200 NewsList
+2020/03/14 12:41:48 NewsList error pq: structure of query does not match function result type
+2020/03/14 12:45:43 200 NewsList
+2020/03/14 12:46:59 200 NewsList
+2020/03/14 12:48:19 200 NewsList
+2020/03/14 12:49:17 200 NewsList
+2020/03/14 12:51:45 interrupt
+2020/03/14 12:51:45 Exit command received. Exiting ....

@@ -1,6 +1,7 @@
 package routes
 
 import (
+	"ecobook/controller/my_product_list"
 	"fmt"
 	"io"
 	"log"
@@ -29,6 +30,7 @@ func RunAllRoutes() {
 	r.GET("/news_list", news.NewsList)
 	r.GET("/image/:image_name", controller.GetImages)
 	r.GET("/product_categories", second.GetCategories)
+	r.GET("/my_product_list", my_product_list.MyProductList)
 
 	_ = r.Run(utils.AppSettings.AppParams.PortRun)
 }
