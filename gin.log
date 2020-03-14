@@ -1,6 +1,10 @@
 [GIN-debug] GET    /news_list                --> ecobook/controller/news.NewsList (3 handlers)
 [GIN-debug] GET    /image/:image_name        --> ecobook/controller.GetImages (3 handlers)
 [GIN-debug] GET    /product_categories       --> ecobook/controller/second.GetCategories (3 handlers)
+[GIN-debug] GET    /utilize/categories       --> ecobook/controller/utilize_point.GetCategories (3 handlers)
+[GIN-debug] GET    /utilize/categories/:category_id --> ecobook/controller/utilize_point.GetPoints (3 handlers)
 [GIN-debug] Listening and serving HTTP on :8000
-2020/03/14 10:29:10 interrupt
-2020/03/14 10:29:10 Exit command received. Exiting ....
+2020/03/14 11:48:24 GetUtilizePoints 200
+2020/03/14 11:48:28 GetUtilizePoints 200
+2020/03/14 11:49:21 interrupt
+2020/03/14 11:49:21 Exit command received. Exiting ....
