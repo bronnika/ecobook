@@ -6,9 +6,9 @@ import (
 	"os/signal"
 	"syscall"
 
-	"./db"
-	"./routes"
-	"./utils"
+	"ecobook/db"
+	"ecobook/routes"
+	"ecobook/utils"
 )
 
 func main() {

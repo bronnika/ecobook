@@ -1,8 +1,8 @@
 package news
 
 import (
-	"../../models"
-	"../../repository/news"
+	"ecobook/models"
+	"ecobook/repository/news"
 )
 
 func NewsList(response *[]models.NewsResponse) error {

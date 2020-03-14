@@ -4,7 +4,8 @@ import (
 	"fmt"
 	"log"
 
-	"../utils"
+	"ecobook/utils"
+
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/postgres"
 )

@@ -4,8 +4,9 @@ import (
 	"log"
 	"net/http"
 
-	"../../models"
-	"../../service/news"
+	"ecobook/models"
+	"ecobook/service/news"
+
 	"github.com/gin-gonic/gin"
 )
 

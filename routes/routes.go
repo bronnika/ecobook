@@ -6,9 +6,11 @@ import (
 	"log"
 	"os"
 
-	"../controller"
-	"../controller/news"
-	"../utils"
+	"ecobook/controller"
+	"ecobook/controller/news"
+	"ecobook/controller/second"
+	"ecobook/utils"
+
 	"github.com/gin-gonic/gin"
 )
 
@@ -26,6 +28,7 @@ func RunAllRoutes() {
 
 	r.GET("/news_list", news.NewsList)
 	r.GET("/image/:image_name", controller.GetImages)
+	r.GET("/product_categories", second.GetCategories)
 
 	_ = r.Run(utils.AppSettings.AppParams.PortRun)
 }

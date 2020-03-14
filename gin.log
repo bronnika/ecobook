@@ -1,6 +1,6 @@
-[GIN-debug] GET    /news_list                --> _/C_/Users/Anastasiya/Documents/ecobook/controller/news.NewsList (3 handlers)
-[GIN-debug] GET    /image                    --> _/C_/Users/Anastasiya/Documents/ecobook/controller.GetImages (3 handlers)
+[GIN-debug] GET    /news_list                --> ecobook/controller/news.NewsList (3 handlers)
+[GIN-debug] GET    /image/:image_name        --> ecobook/controller.GetImages (3 handlers)
+[GIN-debug] GET    /product_categories       --> ecobook/controller/second.GetCategories (3 handlers)
 [GIN-debug] Listening and serving HTTP on :8000
-2020/03/14 10:03:53 200 NewsList
-2020/03/14 10:04:53 interrupt
-2020/03/14 10:04:53 Exit command received. Exiting ....
+2020/03/14 10:29:10 interrupt
+2020/03/14 10:29:10 Exit command received. Exiting ....

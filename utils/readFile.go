@@ -1,18 +1,18 @@
 package utils
 
 import (
+	"ecobook/models"
 	"encoding/json"
+	"fmt"
 	"log"
 	"os"
-	"fmt"
-	"../models"
 )
 
 var (
 	AppSettings models.Settings
 )
 
-func ReadSettings(){
+func ReadSettings() {
 	fmt.Println("starting reading settings file")
 	configFile, err := os.Open("./settings.json")
 
