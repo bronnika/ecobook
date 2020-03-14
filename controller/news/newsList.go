@@ -13,9 +13,10 @@ import (
 func NewsList(c *gin.Context) {
 	var (
 		response []models.NewsResponse
+		userId = c.GetHeader("user_id")
 	)
 
-	if err := news.NewsList(&response); err != nil {
+	if err := news.NewsList(userId, &response); err != nil {
 		log.Println("NewsList error", err.Error())
 		c.JSON(http.StatusBadRequest, gin.H{
 			"reason": "что-то пошло не так",

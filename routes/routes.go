@@ -34,6 +34,7 @@ func RunAllRoutes() {
 	utilize := r.Group("/utilize")
 	utilize.GET("/categories", utilize_point.GetCategories)
 	utilize.GET("/categories/:category_id", utilize_point.GetPoints)
+	utilize.GET("/point/:id", utilize_point.GetPoint)
 
 	_ = r.Run(utils.AppSettings.AppParams.PortRun)
 }

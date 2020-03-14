@@ -5,6 +5,6 @@ import (
 	"ecobook/repository/news"
 )
 
-func NewsList(response *[]models.NewsResponse) error {
-	return news.NewsList(response)
+func NewsList(userId string, response *[]models.NewsResponse) error {
+	return news.NewsList(userId, response)
 }
