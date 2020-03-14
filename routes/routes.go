@@ -2,6 +2,7 @@ package routes
 
 import (
 	"ecobook/controller/my_product_list"
+	"ecobook/controller/participate"
 	"fmt"
 	"io"
 	"log"
@@ -34,11 +35,11 @@ func RunAllRoutes() {
 	r.GET("/product_categories", second.GetCategories)
 	r.GET("/products/:categoryID", product.GetProductList)
 	r.GET("/my_product_list", my_product_list.MyProductList)
+	r.POST("/participate/", participate.Participate)
 
 	utilize := r.Group("/utilize")
 	utilize.GET("/categories", utilize_point.GetCategories)
 	utilize.GET("/categories/:category_id", utilize_point.GetPoints)
-	r.GET("/my_product_list", my_product_list.MyProductList)
 
 	_ = r.Run(utils.AppSettings.AppParams.PortRun)
 }
