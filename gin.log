@@ -1,6 +1,14 @@
+[GIN-debug] POST   /otp                      --> ecobook/controller/auth.OtpServer (3 handlers)
+[GIN-debug] POST   /otp_check                --> ecobook/controller/auth.OtpCheck (3 handlers)
+[GIN-debug] POST   /registration             --> ecobook/controller/auth.Registration (3 handlers)
 [GIN-debug] GET    /news_list                --> ecobook/controller/news.NewsList (3 handlers)
 [GIN-debug] GET    /image/:image_name        --> ecobook/controller.GetImages (3 handlers)
 [GIN-debug] GET    /product_categories       --> ecobook/controller/second.GetCategories (3 handlers)
 [GIN-debug] Listening and serving HTTP on :8000
-2020/03/14 10:29:10 interrupt
-2020/03/14 10:29:10 Exit command received. Exiting ....
+2020/03/14 14:28:20 {919123123}
+2020/03/14 14:28:20 phone number: 919123123  otp code: 9410
+2020/03/14 14:28:23 query resp: {true 3 0 }
+2020/03/14 14:28:38 {988123123}
+2020/03/14 14:28:38 phone number: 988123123  otp code: 3551
+2020/03/14 14:28:48 query resp: {false 0 1 Введен неправильный или просроченный OTP}
+2020/03/14 14:28:53 query resp: {false 0 0 }
