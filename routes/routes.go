@@ -3,6 +3,7 @@ package routes
 import (
 	"ecobook/controller/auth"
 	"ecobook/controller/my_product_list"
+	"ecobook/controller/participate"
 	"fmt"
 	"io"
 	"log"
@@ -45,6 +46,7 @@ func RunAllRoutes() {
 	r.GET("/product/sale_types", product.GetSaleTypes)
 	r.POST("/product/add_new", product.AddNewProduct)
 	r.GET("/my_product_list", my_product_list.MyProductList)
+	r.POST("/participate/", participate.Participate)
 
 	utilize := r.Group("/utilize")
 	utilize.GET("/categories", utilize_point.GetCategories)

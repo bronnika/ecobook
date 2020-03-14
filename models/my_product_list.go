@@ -11,3 +11,6 @@ type MyProductList struct {
 	IsActive   bool      `gorm:"p_is_active" json:"is_active"`
 	CreateDate time.Time `gorm:"column:p_create_date" json:"create_date"`
 }
+type Count struct {
+	Count int `gorm:"column:count" json:"count"`
+}
