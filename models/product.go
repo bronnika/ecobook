@@ -15,3 +15,19 @@ type Product struct {
 	UserName     string  `json:"user_name" gorm:"column:user_name"`
 	SaleTypeName string  `json:"-" gorm:"column:sale_type_name"`
 }
+
+type AddNewProductReq struct {
+	Name        string
+	Description string
+	CategoryID  int64
+	UserID      int64
+	SaleTypeID  int64
+	Price       float64
+	Photo       string
+}
+
+type SalesTypes struct {
+	ID   int64  `json:"id" gorm:"column:id"`
+	Name string `json:"name" gorm:"column:name"`
+	Code string `json:"code" gorm:"column:code"`
+}

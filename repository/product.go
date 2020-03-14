@@ -19,3 +19,26 @@ where pr.category_id = ?`
 	}
 	return products
 }
+
+func AddNewProduct(newProduct models.AddNewProductReq) error {
+	sqlQuery := `insert into product (category_id, name, photo, description, user_id, 
+				sale_type_id, price) values (?, ?, ?, ?, ?, ?, ?)`
+
+	err := db.GetDBConn().Exec(sqlQuery, newProduct.CategoryID, newProduct.Name, newProduct.Photo,
+		newProduct.Description, newProduct.UserID, newProduct.SaleTypeID, newProduct.Price).Error
+	if err != nil {
+		log.Println("error AddNewProduct insert query -> ", err)
+		return err
+	}
+	return nil
+}
+
+func GetSalesTypes() []models.SalesTypes {
+	sqlQuery := `select * from sale_type order by id asc`
+	var saleTypes []models.SalesTypes
+	if err := db.GetDBConn().Raw(sqlQuery).Scan(&saleTypes).Error; err != nil {
+		log.Println("GetProductsByCategoryID -> ", err)
+		return saleTypes
+	}
+	return saleTypes
+}

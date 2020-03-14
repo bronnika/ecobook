@@ -13,6 +13,7 @@
 [GIN-debug] GET    /utilize/categories/:category_id --> ecobook/controller/utilize_point.GetPoints (3 handlers)
 [GIN-debug] GET    /utilize/point/:id        --> ecobook/controller/utilize_point.GetPoint (3 handlers)
 [GIN-debug] Listening and serving HTTP on :8000
+<<<<<<< HEAD
 2020/03/14 16:17:38 FavoriteProducts 200 1
 2020/03/14 16:35:55 {}
 2020/03/14 16:35:55 phone number:   otp code: 9410
@@ -25,3 +26,39 @@
 2020/03/14 17:16:35 query resp: {true 4 0 }
 2020/03/14 17:16:40 interrupt
 2020/03/14 17:16:40 Exit command received. Exiting ....
+=======
+2020/03/14 15:35:30 200 Participate
+2020/03/14 15:35:34 200 Participate
+2020/03/14 15:35:36 200 Participate
+2020/03/14 15:35:38 200 Participate
+2020/03/14 15:35:40 200 Participate
+2020/03/14 15:35:44 200 Participate
+2020/03/14 15:35:47 200 Participate
+2020/03/14 15:36:02 200 Participate
+2020/03/14 15:36:04 200 Participate
+2020/03/14 15:36:57 200 Participate
+2020/03/14 15:36:59 200 Participate
+2020/03/14 15:37:00 200 Participate
+2020/03/14 15:37:01 200 Participate
+2020/03/14 15:37:02 200 Participate
+2020/03/14 15:37:03 200 Participate
+2020/03/14 15:37:04 200 Participate
+2020/03/14 15:37:05 200 Participate
+2020/03/14 15:37:06 200 Participate
+2020/03/14 15:37:07 200 Participate
+2020/03/14 15:37:08 200 Participate
+2020/03/14 15:37:08 200 Participate
+2020/03/14 15:37:09 200 Participate
+2020/03/14 15:37:10 200 Participate
+2020/03/14 15:37:10 200 Participate
+2020/03/14 15:37:11 200 Participate
+2020/03/14 15:37:12 200 Participate
+2020/03/14 15:47:05 interrupt
+2020/03/14 15:47:05 Exit command received. Exiting ....
+<<<<<<< HEAD
+2020/03/14 14:53:05 interrupt
+2020/03/14 14:53:05 Exit command received. Exiting ....
+=======
+2020/03/14 14:44:04 Registrantion func query error: pq: duplicate key value violates unique constraint "user_phone_uindex"
+>>>>>>> a11ebda1873afc9e31b69a5b3992c30dcebdfe84
+>>>>>>> 2abd8d9d693398bc54ce65df6bbae37cd8eedc7a

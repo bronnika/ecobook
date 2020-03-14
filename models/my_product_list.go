@@ -11,6 +11,7 @@ type MyProductList struct {
 	IsActive   bool      `gorm:"p_is_active" json:"is_active"`
 	CreateDate time.Time `gorm:"column:p_create_date" json:"create_date"`
 }
+<<<<<<< HEAD
 
 type FavoriteProduct struct {
 	ID           int     `json:"id" gorm:"column:p_id"`
@@ -20,4 +21,8 @@ type FavoriteProduct struct {
 	BuyerID      int     `json:"buyer_id" gorm:"column:buyer_id"`
 	SaleTypeName string  `json:"sale_type_name" gorm:"column:p_sale_type_name"`
 	Price        float64 `json:"price" gorm:"column:p_price"`
+=======
+type Count struct {
+	Count int `gorm:"column:count" json:"count"`
+>>>>>>> 2abd8d9d693398bc54ce65df6bbae37cd8eedc7a
 }
