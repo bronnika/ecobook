@@ -5,10 +5,10 @@ import (
 	"ecobook/models"
 )
 
-func MyProductList(response *[]models.MyProductList) error {
-	sqlQuery := `select * from my_product_list()`
+func MyProductList(response *[]models.MyProductList, userID int) error {
+	sqlQuery := `select * from my_product_list(?)`
 
-	if err := db.GetDBConn().Raw(sqlQuery).Scan(&response).Error; err != nil {
+	if err := db.GetDBConn().Raw(sqlQuery, userID).Scan(&response).Error; err != nil {
 		return err
 	}
 

@@ -33,6 +33,7 @@ func RunAllRoutes() {
 	r.GET("/image/:image_name", controller.GetImages)
 	r.GET("/product_categories", second.GetCategories)
 	r.GET("/products/:categoryID", product.GetProductList)
+	r.GET("/my_product_list", my_product_list.MyProductList)
 
 	utilize := r.Group("/utilize")
 	utilize.GET("/categories", utilize_point.GetCategories)

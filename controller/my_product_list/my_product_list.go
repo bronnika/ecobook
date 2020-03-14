@@ -6,14 +6,22 @@ import (
 	"github.com/gin-gonic/gin"
 	"log"
 	"net/http"
+	"strconv"
 )
 
 func MyProductList(c *gin.Context) {
 	var (
 		response []models.MyProductList
 	)
-
-	if err := my_product_list.MyProductList(&response); err != nil {
+	userID, err := strconv.Atoi(c.Param("j"))
+	if err != nil {
+		log.Println("MyProductList error", err.Error())
+		c.JSON(http.StatusBadRequest, gin.H{
+			"reason": "что-то пошло не так",
+		})
+		return
+	}
+	if err := my_product_list.MyProductList(&response, userID); err != nil {
 		log.Println("MyProductList error", err.Error())
 		c.JSON(http.StatusBadRequest, gin.H{
 			"reason": "что-то пошло не так",

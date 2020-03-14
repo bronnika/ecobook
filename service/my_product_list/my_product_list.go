@@ -5,6 +5,6 @@ import (
 	"ecobook/repository/my_product_list"
 )
 
-func MyProductList(response *[]models.MyProductList) error {
-	return my_product_list.MyProductList(response)
+func MyProductList(response *[]models.MyProductList, userID int) error {
+	return my_product_list.MyProductList(response, userID)
 }
