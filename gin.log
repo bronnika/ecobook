@@ -6,59 +6,15 @@
 [GIN-debug] GET    /image/:image_name        --> ecobook/controller.GetImages (3 handlers)
 [GIN-debug] GET    /product_categories       --> ecobook/controller/second.GetCategories (3 handlers)
 [GIN-debug] GET    /products/:categoryID     --> ecobook/controller/product.GetProductList (3 handlers)
+[GIN-debug] GET    /product/sale_types       --> ecobook/controller/product.GetSaleTypes (3 handlers)
+[GIN-debug] POST   /product/add_new          --> ecobook/controller/product.AddNewProduct (3 handlers)
 [GIN-debug] GET    /my_product_list          --> ecobook/controller/my_product_list.MyProductList (3 handlers)
+[GIN-debug] POST   /participate/             --> ecobook/controller/participate.Participate (3 handlers)
 [GIN-debug] POST   /like_product/:product_id --> ecobook/controller/my_product_list.LikeProduct (3 handlers)
 [GIN-debug] GET    /favorite_products        --> ecobook/controller/my_product_list.FavoriteProducts (3 handlers)
 [GIN-debug] GET    /utilize/categories       --> ecobook/controller/utilize_point.GetCategories (3 handlers)
 [GIN-debug] GET    /utilize/categories/:category_id --> ecobook/controller/utilize_point.GetPoints (3 handlers)
 [GIN-debug] GET    /utilize/point/:id        --> ecobook/controller/utilize_point.GetPoint (3 handlers)
 [GIN-debug] Listening and serving HTTP on :8000
-<<<<<<< HEAD
-2020/03/14 16:17:38 FavoriteProducts 200 1
-2020/03/14 16:35:55 {}
-2020/03/14 16:35:55 phone number:   otp code: 9410
-2020/03/14 17:01:07 {551111148}
-2020/03/14 17:01:07 phone number: 551111148  otp code: 3551
-2020/03/14 17:12:12 {988123123}
-2020/03/14 17:12:12 phone number: 988123123  otp code: 5821
-2020/03/14 17:14:39 {988123123}
-2020/03/14 17:14:39 phone number: 988123123  otp code: 51
-2020/03/14 17:16:35 query resp: {true 4 0 }
-2020/03/14 17:16:40 interrupt
-2020/03/14 17:16:40 Exit command received. Exiting ....
-=======
-2020/03/14 15:35:30 200 Participate
-2020/03/14 15:35:34 200 Participate
-2020/03/14 15:35:36 200 Participate
-2020/03/14 15:35:38 200 Participate
-2020/03/14 15:35:40 200 Participate
-2020/03/14 15:35:44 200 Participate
-2020/03/14 15:35:47 200 Participate
-2020/03/14 15:36:02 200 Participate
-2020/03/14 15:36:04 200 Participate
-2020/03/14 15:36:57 200 Participate
-2020/03/14 15:36:59 200 Participate
-2020/03/14 15:37:00 200 Participate
-2020/03/14 15:37:01 200 Participate
-2020/03/14 15:37:02 200 Participate
-2020/03/14 15:37:03 200 Participate
-2020/03/14 15:37:04 200 Participate
-2020/03/14 15:37:05 200 Participate
-2020/03/14 15:37:06 200 Participate
-2020/03/14 15:37:07 200 Participate
-2020/03/14 15:37:08 200 Participate
-2020/03/14 15:37:08 200 Participate
-2020/03/14 15:37:09 200 Participate
-2020/03/14 15:37:10 200 Participate
-2020/03/14 15:37:10 200 Participate
-2020/03/14 15:37:11 200 Participate
-2020/03/14 15:37:12 200 Participate
-2020/03/14 15:47:05 interrupt
-2020/03/14 15:47:05 Exit command received. Exiting ....
-<<<<<<< HEAD
-2020/03/14 14:53:05 interrupt
-2020/03/14 14:53:05 Exit command received. Exiting ....
-=======
-2020/03/14 14:44:04 Registrantion func query error: pq: duplicate key value violates unique constraint "user_phone_uindex"
->>>>>>> a11ebda1873afc9e31b69a5b3992c30dcebdfe84
->>>>>>> 2abd8d9d693398bc54ce65df6bbae37cd8eedc7a
+2020/03/14 17:21:07 interrupt
+2020/03/14 17:21:07 Exit command received. Exiting ....
