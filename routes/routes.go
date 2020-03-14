@@ -42,6 +42,8 @@ func RunAllRoutes() {
 	r.GET("/image/:image_name", controller.GetImages)
 	r.GET("/product_categories", second.GetCategories)
 	r.GET("/products/:categoryID", product.GetProductList)
+	r.GET("/product/sale_types", product.GetSaleTypes)
+	r.POST("/product/add_new", product.AddNewProduct)
 	r.GET("/my_product_list", my_product_list.MyProductList)
 
 	utilize := r.Group("/utilize")
@@ -49,7 +51,7 @@ func RunAllRoutes() {
 	utilize.GET("/categories/:category_id", utilize_point.GetPoints)
 	utilize.GET("/point/:id", utilize_point.GetPoint)
 
-	go controller.HandleMessages()
+	//go controller.HandleMessages()
 
 	_ = r.Run(utils.AppSettings.AppParams.PortRun)
 }
