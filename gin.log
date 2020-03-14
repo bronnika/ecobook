@@ -12,3 +12,5 @@
 2020/03/14 14:28:38 phone number: 988123123  otp code: 3551
 2020/03/14 14:28:48 query resp: {false 0 1 Введен неправильный или просроченный OTP}
 2020/03/14 14:28:53 query resp: {false 0 0 }
+2020/03/14 14:40:47 interrupt
+2020/03/14 14:40:47 Exit command received. Exiting ....
