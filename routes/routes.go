@@ -12,6 +12,7 @@ import (
 	"ecobook/controller/utilize_point"
 	"ecobook/utils"
 
+	"ecobook/controller/product"
 	"github.com/gin-gonic/gin"
 )
 
@@ -30,6 +31,7 @@ func RunAllRoutes() {
 	r.GET("/news_list", news.NewsList)
 	r.GET("/image/:image_name", controller.GetImages)
 	r.GET("/product_categories", second.GetCategories)
+	r.GET("/products/:categoryID", product.GetProductList)
 
 	utilize := r.Group("/utilize")
 	utilize.GET("/categories", utilize_point.GetCategories)
