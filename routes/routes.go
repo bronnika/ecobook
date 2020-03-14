@@ -6,6 +6,7 @@ import (
 	"log"
 	"os"
 
+	"../controller"
 	"../controller/news"
 	"../utils"
 	"github.com/gin-gonic/gin"
@@ -24,6 +25,7 @@ func RunAllRoutes() {
 	gin.DefaultWriter = io.MultiWriter(f, os.Stdout)
 
 	r.GET("/news_list", news.NewsList)
+	r.GET("/image", controller.GetImages)
 
 	_ = r.Run(utils.AppSettings.AppParams.PortRun)
 }

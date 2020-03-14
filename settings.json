@@ -6,7 +6,7 @@
       "logFile": "gin.log"
     },
     "postgresParams": {
-      "server": "localhost",
+      "server": "192.168.1.174",
       "port": 5432,
       "user": "postgres",
       "password": "qwerty",

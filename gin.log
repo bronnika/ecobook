@@ -1,5 +1,5 @@
 [GIN-debug] GET    /news_list                --> _/C_/Users/Anastasiya/Documents/ecobook/controller/news.NewsList (3 handlers)
 [GIN-debug] Listening and serving HTTP on :8000
-2020/03/13 23:30:19 200 NewsList
-2020/03/13 23:31:07 interrupt
-2020/03/13 23:31:07 Exit command received. Exiting ....
+2020/03/14 09:25:06 200 NewsList
+2020/03/14 10:02:48 interrupt
+2020/03/14 10:02:48 Exit command received. Exiting ....
