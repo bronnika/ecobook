@@ -1,6 +1,7 @@
 package routes
 
 import (
+	"ecobook/controller/auth"
 	"fmt"
 	"io"
 	"log"
@@ -25,6 +26,13 @@ func RunAllRoutes() {
 
 	log.SetOutput(f)
 	gin.DefaultWriter = io.MultiWriter(f, os.Stdout)
+
+	r.POST("/otp", auth.OtpServer)
+	r.POST("/otp_check", auth.OtpCheck)
+
+	r.POST("/registration", auth.Registration)
+
+	r.GET("ws")
 
 	r.GET("/news_list", news.NewsList)
 	r.GET("/image/:image_name", controller.GetImages)
