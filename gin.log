@@ -7,5 +7,5 @@
 [GIN-debug] GET    /utilize/categories/:category_id --> ecobook/controller/utilize_point.GetPoints (3 handlers)
 [GIN-debug] GET    /utilize/point/:id        --> ecobook/controller/utilize_point.GetPoint (3 handlers)
 [GIN-debug] Listening and serving HTTP on :8000
-2020/03/14 14:47:49 interrupt
-2020/03/14 14:47:49 Exit command received. Exiting ....
+2020/03/14 14:53:05 interrupt
+2020/03/14 14:53:05 Exit command received. Exiting ....
