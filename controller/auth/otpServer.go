@@ -9,7 +9,10 @@ import (
 )
 
 func OtpServer(c *gin.Context) {
-	var request models.OtpServer
+	var (
+		request models.OtpServer
+		otp     string
+	)
 
 	if err := c.ShouldBindJSON(&request); err != nil {
 		log.Println("OtpServer func bind error:", err.Error())
@@ -21,7 +24,7 @@ func OtpServer(c *gin.Context) {
 
 	log.Println(request)
 
-	if err := auth.OtpServer(request.PhoneNum); err != nil {
+	if err := auth.OtpServer(request.PhoneNum, &otp); err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{
 			"reason": err.Error(),
 		})
@@ -29,6 +32,6 @@ func OtpServer(c *gin.Context) {
 	}
 
 	c.JSON(http.StatusOK, gin.H{
-		"reason": "OTP отправлен на номер " + request.PhoneNum,
+		"reason": "OTP отправлен на номер " + request.PhoneNum + " otp:" + otp,
 	})
 }

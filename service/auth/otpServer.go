@@ -6,10 +6,12 @@ import (
 	"strconv"
 )
 
-func OtpServer(phoneNum string) error {
-	otpCode := rand.Int() % 10000
+func OtpServer(phoneNum string, otp *string) error {
+	otpCode := rand.Intn(9999-1000) + 1000
 
 	otpCodeStr := strconv.Itoa(otpCode)
+
+	*otp = otpCodeStr
 
 	// отправка смс OTP юзеру
 	if err := auth.OtpServer(phoneNum, otpCodeStr); err != nil {
