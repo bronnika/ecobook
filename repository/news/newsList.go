@@ -5,10 +5,10 @@ import (
 	"ecobook/models"
 )
 
-func NewsList(response *[]models.NewsResponse) error {
-	sqlQuery := `select * from news_list()`
+func NewsList(userId string, response *[]models.NewsResponse) error {
+	sqlQuery := `select * from news_list_ext(?)`
 
-	if err := db.GetDBConn().Raw(sqlQuery).Scan(&response).Error; err != nil {
+	if err := db.GetDBConn().Raw(sqlQuery, userId).Scan(&response).Error; err != nil {
 		return err
 	}
 

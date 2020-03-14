@@ -1,3 +1,7 @@
+[GIN-debug] POST   /otp                      --> ecobook/controller/auth.OtpServer (3 handlers)
+[GIN-debug] POST   /otp_check                --> ecobook/controller/auth.OtpCheck (3 handlers)
+[GIN-debug] POST   /registration             --> ecobook/controller/auth.Registration (3 handlers)
+[GIN-debug] GET    /ws                       --> github.com/gin-gonic/gin.RecoveryWithWriter.func1 (2 handlers)
 [GIN-debug] GET    /news_list                --> ecobook/controller/news.NewsList (3 handlers)
 [GIN-debug] GET    /image/:image_name        --> ecobook/controller.GetImages (3 handlers)
 [GIN-debug] GET    /product_categories       --> ecobook/controller/second.GetCategories (3 handlers)
@@ -35,3 +39,9 @@
 2020/03/14 15:37:12 200 Participate
 2020/03/14 15:47:05 interrupt
 2020/03/14 15:47:05 Exit command received. Exiting ....
+<<<<<<< HEAD
+2020/03/14 14:53:05 interrupt
+2020/03/14 14:53:05 Exit command received. Exiting ....
+=======
+2020/03/14 14:44:04 Registrantion func query error: pq: duplicate key value violates unique constraint "user_phone_uindex"
+>>>>>>> a11ebda1873afc9e31b69a5b3992c30dcebdfe84
