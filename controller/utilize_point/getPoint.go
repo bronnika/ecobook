@@ -11,11 +11,11 @@ import (
 
 func GetPoint(c *gin.Context) {
 	var (
-		pointID  = c.Param("id")
-		response models.UtilizePoint
+		//categoryID = c.Param("category_id")
+		response []models.UtilizePoint
 	)
 
-	if err := utilize_point.GetPoint(pointID, &response); err != nil {
+	if err := utilize_point.GetPoint(1, &response); err != nil {
 		log.Println("GetUtilizePoint error", err.Error())
 		c.JSON(http.StatusBadRequest, gin.H{
 			"reason": "что-то пошло не так",
