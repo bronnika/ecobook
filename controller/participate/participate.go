@@ -9,7 +9,7 @@ import (
 )
 
 func Participate(c *gin.Context) {
-	eventID, err1 := strconv.Atoi(c.Query("event_id"))
+	eventID, err1 := strconv.Atoi(c.Param("event_id"))
 	userID, err := strconv.Atoi(c.GetHeader("user_id"))
 	if err != nil || err1 != nil {
 		log.Println("Participate error", err.Error())

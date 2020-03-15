@@ -46,7 +46,7 @@ func RunAllRoutes() {
 	r.GET("/product/sale_types", product.GetSaleTypes)
 	r.POST("/product/add_new", product.AddNewProduct)
 	r.GET("/my_product_list", my_product_list.MyProductList)
-	r.POST("/participate/", participate.Participate)
+	r.POST("/participate/:event_id", participate.Participate)
 
 	r.POST("/like_product/:product_id", my_product_list.LikeProduct)
 	r.GET("/favorite_products", my_product_list.FavoriteProducts)
