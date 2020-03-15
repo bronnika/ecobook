@@ -13,7 +13,7 @@ func MyProductList(c *gin.Context) {
 	var (
 		response []models.MyProductList
 	)
-	userID, err := strconv.Atoi(c.Param("j"))
+	userID, err := strconv.Atoi(c.GetHeader("user_id"))
 	if err != nil {
 		log.Println("MyProductList error", err.Error())
 		c.JSON(http.StatusBadRequest, gin.H{
