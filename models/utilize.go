@@ -12,9 +12,10 @@ type UtilizePoint struct {
 }
 
 type UtilizeCategory struct {
-	ID    int    `json:"id" gorm:"column:id"`
-	Name  string `json:"name" gorm:"column:name"`
-	Photo string `json:"photo" gorm:"column:photo"`
+	ID            int            `json:"id" gorm:"column:id"`
+	Name          string         `json:"name" gorm:"column:name"`
+	Photo         string         `json:"photo" gorm:"column:photo"`
+	UtilizePoints []UtilizePoint `json:"utilize_points"`
 }
 
 type UtilizePointShortDesc struct {

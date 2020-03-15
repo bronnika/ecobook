@@ -5,6 +5,6 @@ import (
 	"ecobook/repository/utilize_point"
 )
 
-func GetPoint(pointId string, response *models.UtilizePoint) error {
-	return utilize_point.GetPoint(pointId, response)
+func GetPoint(categoryID int, response *[]models.UtilizePoint) error {
+	return utilize_point.GetPoint(categoryID, response)
 }

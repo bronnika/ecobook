@@ -17,7 +17,7 @@ type FavoriteProduct struct {
 	Name         string  `json:"name" gorm:"column:p_name"`
 	Photo        string  `json:"photo" gorm:"column:p_photo"`
 	Description  string  `json:"description" gorm:"column:p_description"`
-	BuyerID      int     `json:"buyer_id" gorm:"column:buyer_id"`
+	BuyerID      int     `json:"buyer_id" gorm:"column:p_buyer_id"`
 	SaleTypeName string  `json:"sale_type_name" gorm:"column:p_sale_type_name"`
 	Price        float64 `json:"price" gorm:"column:p_price"`
 }

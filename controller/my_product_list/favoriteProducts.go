@@ -24,4 +24,5 @@ func FavoriteProducts(c *gin.Context) {
 	}
 
 	log.Println("FavoriteProducts", http.StatusOK, userID)
+	c.JSON(http.StatusOK, response)
 }

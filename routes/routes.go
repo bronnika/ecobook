@@ -53,8 +53,8 @@ func RunAllRoutes() {
 
 	utilize := r.Group("/utilize")
 	utilize.GET("/categories", utilize_point.GetCategories)
-	utilize.GET("/categories/:category_id", utilize_point.GetPoints)
-	utilize.GET("/point/:id", utilize_point.GetPoint)
+	utilize.GET("/categories/:category_id", utilize_point.GetPoint)
+	// utilize.GET("/point/:id", utilize_point.GetPoint)
 
 	//go controller.HandleMessages()
 

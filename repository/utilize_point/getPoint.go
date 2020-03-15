@@ -5,10 +5,10 @@ import (
 	"ecobook/models"
 )
 
-func GetPoint(pointId string, response *models.UtilizePoint) error {
-	sqlQuery := `select * from utilize_point where id = ?`
+func GetPoint(categoryID int, response *[]models.UtilizePoint) error {
+	sqlQuery := `select * from utilize_point where category_id = ?`
 
-	if err := db.GetDBConn().Raw(sqlQuery, pointId).Scan(&response).Error; err != nil {
+	if err := db.GetDBConn().Raw(sqlQuery, categoryID).Scan(&response).Error; err != nil {
 		return err
 	}
 	return nil
